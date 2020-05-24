@@ -1,0 +1,4 @@
+C:\Users\usuario\Desktop\Universidad\2020-I\ArquiHard\Proyecto final\Proyecto-Final-ArquiHard\bin\Debug\netcoreapp3.1\Proyecto-Final-ArquiHard.exe
+C:\Users\usuario\Desktop\Universidad\2020-I\ArquiHard\Proyecto final\Proyecto-Final-ArquiHard\obj\Debug\netcoreapp3.1\Proyecto-Final-ArquiHard.csprojAssemblyReference.cache
+C:\Users\usuario\Desktop\Universidad\2020-I\ArquiHard\Proyecto final\Proyecto-Final-ArquiHard\obj\Debug\netcoreapp3.1\Proyecto-Final-ArquiHard.AssemblyInfoInputs.cache
+C:\Users\usuario\Desktop\Universidad\2020-I\ArquiHard\Proyecto final\Proyecto-Final-ArquiHard\obj\Debug\netcoreapp3.1\Proyecto-Final-ArquiHard.AssemblyInfo.cs
