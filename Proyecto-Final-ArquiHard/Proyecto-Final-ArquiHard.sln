@@ -3,7 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto-Final-ArquiHard", "Proyecto-Final-ArquiHard.csproj", "{6BACA965-1521-4987-BA5F-8EEA7582233E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proyecto-Final-ArquiHard", "Proyecto-Final-ArquiHard.csproj", "{6BACA965-1521-4987-BA5F-8EEA7582233E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{68714CE0-5948-4652-AF3A-3CBBEC2C1F30}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\..\Downloads\ImagenesPractica\16_1500.jpg = ..\..\..\..\..\..\Downloads\ImagenesPractica\16_1500.jpg
+		..\..\..\..\..\..\Downloads\ImagenesPractica\16_160.jpg = ..\..\..\..\..\..\Downloads\ImagenesPractica\16_160.jpg
+		..\..\..\..\..\..\Downloads\ImagenesPractica\16_512.jpg = ..\..\..\..\..\..\Downloads\ImagenesPractica\16_512.jpg
+		..\..\..\..\..\..\Downloads\ImagenesPractica\16_64.jpg = ..\..\..\..\..\..\Downloads\ImagenesPractica\16_64.jpg
+		..\..\..\..\..\..\Downloads\ImagenesPractica\32_1500.jpg = ..\..\..\..\..\..\Downloads\ImagenesPractica\32_1500.jpg
+		..\..\..\..\..\..\Downloads\ImagenesPractica\32_160.jpg = ..\..\..\..\..\..\Downloads\ImagenesPractica\32_160.jpg
+		..\..\..\..\..\..\Downloads\ImagenesPractica\32_512.jpg = ..\..\..\..\..\..\Downloads\ImagenesPractica\32_512.jpg
+		..\..\..\..\..\..\Downloads\ImagenesPractica\32_64.jpg = ..\..\..\..\..\..\Downloads\ImagenesPractica\32_64.jpg
+		..\..\..\..\..\..\Downloads\ImagenesPractica\8_1500.jpg = ..\..\..\..\..\..\Downloads\ImagenesPractica\8_1500.jpg
+		..\..\..\..\..\..\Downloads\ImagenesPractica\8_1500.png = ..\..\..\..\..\..\Downloads\ImagenesPractica\8_1500.png
+		..\..\..\..\..\..\Downloads\ImagenesPractica\8_160.jpg = ..\..\..\..\..\..\Downloads\ImagenesPractica\8_160.jpg
+		..\..\..\..\..\..\Downloads\ImagenesPractica\8_512.jpg = ..\..\..\..\..\..\Downloads\ImagenesPractica\8_512.jpg
+		..\..\..\..\..\..\Downloads\ImagenesPractica\8_64.jpg = ..\..\..\..\..\..\Downloads\ImagenesPractica\8_64.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
