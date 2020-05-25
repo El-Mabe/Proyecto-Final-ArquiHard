@@ -11,28 +11,22 @@ namespace Proyecto_Final_ArquiHard
             
         }
 
+        public static Bitmap CreateNonIndexedImage(Image src)
+        {
+            Bitmap newBmp = new Bitmap(src.Width, src.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
 
-        public static Object[] version1(Bitmap imagenEnBitmap, String numeroDeBits)
+            using (Graphics gfx = Graphics.FromImage(newBmp))
+            {
+                gfx.DrawImage(src, 0, 0);
+            }
+
+            return newBmp;
+        }
+
+        public static Object[] version1(Bitmap imagenEnBitmap)
         {
             Object[] imagenYTiempo = new Object[2];
-            int numero = 0;
-
-            if (numeroDeBits.Equals("24"))
-            {
-                //Para profunidad de 24 bits, el maximo valor por canal (R, G o B de 8 bits) es 255
-                numero = 255;
-            }
-            else if (numeroDeBits.Equals("48"))
-            {
-                //Para profunidad de 24 bits, el maximo valor por canal (R, G o B de 8 bits) es 65535
-                numero = 65535;
-            }
-            else if (numeroDeBits.Equals("96"))
-            {
-                //Para profunidad de 24 bits, el maximo valor por canal (R, G o B de 8 bits) es 4294967295
-                //  numero = 4294967295; ARREGLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR
-            }
-
+            
             //Medicion de tiempo
             Stopwatch sw = new Stopwatch();
             sw.Restart();
@@ -45,9 +39,9 @@ namespace Proyecto_Final_ArquiHard
                 for (y = 0; y < imagenEnBitmap.Height; y++)
                 {
                     Color pixelColor = imagenEnBitmap.GetPixel(x, y);
-                    Color newColor = Color.FromArgb(numero - pixelColor.R, pixelColor.G, pixelColor.B);
-                    newColor = Color.FromArgb(newColor.R, numero - newColor.G, newColor.B);
-                    newColor = Color.FromArgb(newColor.R, newColor.G, numero - newColor.B);
+                    Color newColor = Color.FromArgb(255 - pixelColor.R, pixelColor.G, pixelColor.B);
+                    newColor = Color.FromArgb(newColor.R, 255 - newColor.G, newColor.B);
+                    newColor = Color.FromArgb(newColor.R, newColor.G, 255 - newColor.B);
                     imagenEnBitmap.SetPixel(x, y, newColor);
                 }
             }
@@ -62,7 +56,7 @@ namespace Proyecto_Final_ArquiHard
             return imagenYTiempo;
         }
 
-        public static object[] version2(Bitmap imagenEnBitmap, String numeroDeBits)
+        public static object[] version2(Bitmap imagenEnBitmap)
         {
 
             object[] imagenYTiempo = new object[2];
@@ -123,7 +117,7 @@ namespace Proyecto_Final_ArquiHard
         }
 
 
-        public static Object[] version3(Bitmap imagenEnBitmap, String numeroDeBits)
+        public static Object[] version3(Bitmap imagenEnBitmap)
         {
             Object[] imagenYTiempo = new Object[2];
 
@@ -160,7 +154,7 @@ namespace Proyecto_Final_ArquiHard
             return imagenYTiempo;
         }
 
-        public static Object version4(Bitmap imagenEnBitmap, String numeroDeBits)
+        public static Object version4(Bitmap imagenEnBitmap)
         {
             Object[] imagenYTiempo = new Object[2];
 
@@ -205,7 +199,7 @@ namespace Proyecto_Final_ArquiHard
             return imagenYTiempo;
         }
 
-        public static Object version5(Bitmap imagenEnBitmap, String numeroDeBits)
+        public static Object version5(Bitmap imagenEnBitmap)
         {
             Object[] imagenYTiempo = new Object[2];
 
