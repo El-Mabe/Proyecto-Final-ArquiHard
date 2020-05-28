@@ -13,7 +13,7 @@ namespace intento
             //int algoritmo = 1;
             //int tipo = 3;//1: 8, 2: 16, 3: 32
 
-            Console.WriteLine("Por favor ingrese el numero de la imagen a editar");
+            Console.WriteLine("Por favor ingrese el número de la imagen a editar");
             String numero = Console.ReadLine();
 
             Console.WriteLine("Por favor ingrese la versión del algoritmo a usar");
@@ -22,8 +22,13 @@ namespace intento
             Console.WriteLine("Por favor ingrese el tamaño en bits para la imagen: \n 1. 8bits \n 2. 16bits \n 3. 32bits");
             int tipo = Int32.Parse(Console.ReadLine());
 
-            String ruta = "C:/Users/Principal/Desktop/ImagenesPractica/" + numero + ".bmp";
+            String ruta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\PF\img\" + numero+".bmp";
+            //String ruta = "C:/Users/Principal/Desktop/ImagenesPractica/" + numero + ".bmp";
+
+           
             Bitmap actu = new Bitmap(Image.FromFile(ruta));
+
+            
 
             switch (algoritmo)
             {
@@ -48,8 +53,10 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaByte.pixeles[i, j].R, imgaByte.pixeles[i, j].G, imgaByte.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v1.bmp");
-                            break;
+                                //actu.Save("C:/Users/Principal/Desktop/imagenes/v1.bmp");
+                                //actu.Save(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\PF\img\"+numero+"-"+tipo + ".bmp");
+                                //actu.Save(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"/PF/img/" + numero + "-" + tipo + ".bmp");
+                                break;
                         case 2:
                             ImagenShort imgaShort = new ImagenShort(actu.Height, actu.Width);
                             for (int i = 0; i < actu.Height; i++)
@@ -67,7 +74,7 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaShort.pixeles[i, j].R, imgaShort.pixeles[i, j].G, imgaShort.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v1.bmp");
+                            //actu.Save("C:/Users/Principal/Desktop/imagenes/v1.bmp");
                             break;
                         case 3:
                             ImagenInt imgaInt = new ImagenInt(actu.Height, actu.Width);
@@ -86,7 +93,7 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaInt.pixeles[i, j].R, imgaInt.pixeles[i, j].G, imgaInt.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v1.bmp");
+                            //actu.Save("C:/Users/Principal/Desktop/imagenes/v1.bmp");
                             break;
                     }
                     break;
@@ -112,7 +119,7 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaByte.pixeles[i, j].R, imgaByte.pixeles[i, j].G, imgaByte.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v2.bmp");
+                            //actu.Save("C:/Users/Principal/Desktop/imagenes/v2.bmp");
                             break;
                         case 2:
                             ImagenShort imgaShort = new ImagenShort(actu.Height, actu.Width);
@@ -131,7 +138,7 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaShort.pixeles[i, j].R, imgaShort.pixeles[i, j].G, imgaShort.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v2.bmp");
+                            //actu.Save("C:/Users/Principal/Desktop/imagenes/v2.bmp");
                             break;
                         case 3:
                             ImagenInt imgaInt = new ImagenInt(actu.Height, actu.Width);
@@ -150,7 +157,7 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaInt.pixeles[i, j].R, imgaInt.pixeles[i, j].G, imgaInt.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v2.bmp");
+                            //actu.Save("C:/Users/Principal/Desktop/imagenes/v2.bmp");
                             break;
                     }
                     break;
@@ -176,7 +183,7 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaByte.pixeles[i, j].R, imgaByte.pixeles[i, j].G, imgaByte.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v3.bmp");
+                            //actu.Save("C:/Users/Principal/Desktop/imagenes/v3.bmp");
                             break;
                         case 2:
                             ImagenShort imgaShort = new ImagenShort(actu.Height, actu.Width);
@@ -195,7 +202,7 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaShort.pixeles[i, j].R, imgaShort.pixeles[i, j].G, imgaShort.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v3.bmp");
+                            //actu.Save("C:/Users/Principal/Desktop/imagenes/v3.bmp");
                             break;
                         case 3:
                             ImagenInt imgaInt = new ImagenInt(actu.Height, actu.Width);
@@ -214,7 +221,7 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaInt.pixeles[i, j].R, imgaInt.pixeles[i, j].G, imgaInt.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v3.bmp");
+                           //actu.Save("C:/Users/Principal/Desktop/imagenes/v3.bmp");
                             break;
                     }
                     break;
@@ -240,7 +247,7 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaByte.pixeles[i, j].R, imgaByte.pixeles[i, j].G, imgaByte.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v4.bmp");
+                            //actu.Save("C:/Users/Principal/Desktop/imagenes/v4.bmp");
                             break;
                         case 2:
                             ImagenShort imgaShort = new ImagenShort(actu.Height, actu.Width);
@@ -259,7 +266,7 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaShort.pixeles[i, j].R, imgaShort.pixeles[i, j].G, imgaShort.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v4.bmp");
+                            //actu.Save("C:/Users/Principal/Desktop/imagenes/v4.bmp");
                             break;
                         case 3:
                             ImagenInt imgaInt = new ImagenInt(actu.Height, actu.Width);
@@ -278,7 +285,7 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaInt.pixeles[i, j].R, imgaInt.pixeles[i, j].G, imgaInt.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v4.bmp");
+                            //actu.Save("C:/Users/Principal/Desktop/imagenes/v4.bmp");
                             break;
                     }
                     break;
@@ -304,7 +311,7 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaByte.pixeles[i, j].R, imgaByte.pixeles[i, j].G, imgaByte.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v5.bmp");
+                            //actu.Save("C:/Users/Principal/Desktop/imagenes/v5.bmp");
                             break;
                         case 2:
                             ImagenShort imgaShort = new ImagenShort(actu.Height, actu.Width);
@@ -323,7 +330,7 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaShort.pixeles[i, j].R, imgaShort.pixeles[i, j].G, imgaShort.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v5.bmp");
+                            //actu.Save("C:/Users/Principal/Desktop/imagenes/v5.bmp");
                             break;
                         case 3:
                             ImagenInt imgaInt = new ImagenInt(actu.Height, actu.Width);
@@ -342,11 +349,13 @@ namespace intento
                                     actu.SetPixel(i, j, Color.FromArgb(imgaInt.pixeles[i, j].R, imgaInt.pixeles[i, j].G, imgaInt.pixeles[i, j].B)); ;
                                 }
                             }
-                            actu.Save("C:/Users/Principal/Desktop/imagenes/v5.bmp");
+                            //actu.Save("C:/Users/Principal/Desktop/imagenes/v5.bmp");
                             break;
                     }
                     break;
             }
+           
+            Console.WriteLine("DONE!");
         }
 
         private static ImagenByte version1_Byte(ImagenByte temp)
