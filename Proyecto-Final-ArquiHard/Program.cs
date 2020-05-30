@@ -13,7 +13,7 @@ namespace intento
             //int algoritmo = 1;
             //int tipo = 3;//1: 8, 2: 16, 3: 32
 
-            Console.WriteLine("Por favor ingrese el número de la imagen a editar");
+            Console.WriteLine("Por favor ingrese el número de la imagen a editar \n 1: 64x64 \n 2: 160x160 \n 3: 512x512 \n 4: 1500x1500");
             String numero = Console.ReadLine();
 
             Console.WriteLine("Por favor ingrese la versión del algoritmo a usar");
